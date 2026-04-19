@@ -69,7 +69,10 @@ export function SmartGoals() {
       </div>
       <FadeIn>
         <span className="section-tag mb-6">02. Objectives</span>
-        <h3 className="font-display text-[40px] md:text-[60px] text-[var(--color-text-main)] mb-16 font-normal tracking-tight">SMART Goals</h3>
+        <h3 className="font-display text-[40px] md:text-[60px] text-[var(--color-text-main)] mb-6 font-normal tracking-tight">SMART Goals</h3>
+        <p className="text-xl font-sans text-[var(--color-text-dim)] max-w-3xl mb-16 leading-relaxed tracking-wide">
+          Three practical and realistic goals designed to improve overall well-being.
+        </p>
       </FadeIn>
 
       <div className="grid lg:grid-cols-3 gap-8 lg:gap-10 mb-16 relative z-10">

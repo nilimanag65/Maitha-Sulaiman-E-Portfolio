@@ -16,7 +16,10 @@ export function Interviews() {
 
       <FadeIn>
         <span className="section-tag mb-6">05. Primary Research</span>
-        <h3 className="font-display text-[40px] md:text-[60px] text-[var(--color-text-main)] mb-16 font-normal tracking-tight">Interview Learnings</h3>
+        <h3 className="font-display text-[40px] md:text-[60px] text-[var(--color-text-main)] mb-16 font-normal tracking-tight flex items-center flex-wrap gap-x-4">
+          Interview Learnings
+          <Leaf className="w-8 h-8 md:w-10 md:h-10 text-[var(--color-accent)] opacity-40" />
+        </h3>
       </FadeIn>
 
       <FadeIn delay={0.1} className="glass-card mb-16 p-8 lg:p-10 flex flex-col md:flex-row items-start md:items-center gap-8 bg-[var(--color-card-darker)]">
@@ -31,9 +34,9 @@ export function Interviews() {
         </div>
       </FadeIn>
 
-      <div className="grid lg:grid-cols-3 gap-8 mb-24 relative z-10">
+      <div className="flex flex-col max-w-4xl mx-auto gap-16 mb-24 relative z-10">
         {interviewImages.map((interview, idx) => (
-          <FadeIn key={idx} delay={idx * 0.15} className="glass-card flex flex-col h-full p-4 lg:p-6 bg-[var(--color-card-bg)] border-[var(--color-border-subtle)]">
+          <FadeIn key={idx} delay={idx * 0.15} className="glass-card flex flex-col p-6 lg:p-8 bg-[var(--color-card-bg)] border-[var(--color-border-subtle)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_rgba(74,55,40,0.15)] hover:border-[var(--color-border-strong)]">
             <div className="flex items-center justify-between mb-4 px-2">
               <h4 className="text-lg font-display font-medium text-[var(--color-text-main)] bg-[var(--color-card-darker)] px-3 py-1 rounded-md border border-[var(--color-border-subtle)] shadow-sm">
                 {interview.name}

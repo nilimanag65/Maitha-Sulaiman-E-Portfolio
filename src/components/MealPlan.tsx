@@ -22,7 +22,10 @@ export function MealPlan() {
       </div>
       <FadeIn>
         <span className="section-tag mb-6">04. Nutrition</span>
-        <h3 className="font-display text-[40px] md:text-[60px] text-[var(--color-text-main)] mb-16 font-normal tracking-tight">Two-Week Nutrition</h3>
+        <h3 className="font-display text-[40px] md:text-[60px] text-[var(--color-text-main)] mb-16 font-normal tracking-tight flex items-center flex-wrap gap-x-4">
+          Two-Week Nutrition
+          <Leaf className="w-8 h-8 md:w-10 md:h-10 text-[var(--color-accent)] opacity-40" />
+        </h3>
       </FadeIn>
 
       <div className="space-y-16 relative z-10">
@@ -34,7 +37,7 @@ export function MealPlan() {
               </h4>
             </FadeIn>
             <FadeIn delay={0.2} className="glass-card p-4 lg:p-8 bg-[var(--color-card-bg)]">
-              <div className="rounded-xl overflow-hidden border border-[var(--color-border-subtle)] shadow-[0_8px_30px_rgba(74,55,40,0.08)] flex justify-center bg-[var(--color-bg-dark)]">
+              <div className="rounded-xl overflow-hidden border border-[var(--color-border-subtle)] shadow-[0_8px_30px_rgba(74,55,40,0.08)] flex justify-center bg-[var(--color-bg-dark)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(74,55,40,0.15)] hover:border-[var(--color-border-strong)]">
                 <img 
                   src={week.src} 
                   alt={week.alt} 

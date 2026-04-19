@@ -50,9 +50,17 @@ export function ReflectiveActivities() {
         <h3 className="font-display text-[40px] md:text-[60px] text-[var(--color-text-main)] mb-16 font-normal tracking-tight">Reflective Activities</h3>
       </FadeIn>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 relative z-10">
+      <div className="grid md:grid-cols-2 xl:grid-cols-6 gap-8 relative z-10 auto-rows-fr">
         {activities.map((ref, idx) => (
-          <FadeIn key={idx} delay={idx * 0.1} className="glass-card flex flex-col h-full p-8 lg:p-10 group bg-[var(--color-card-bg)] hover:bg-[#f0e6d2] transition-colors duration-500">
+          <FadeIn 
+            key={idx} 
+            delay={idx * 0.1} 
+            className={`glass-card flex flex-col h-full p-8 lg:p-10 group bg-[var(--color-card-bg)] hover:bg-[#f0e6d2] transition-colors duration-500 ${
+              idx === 3 ? "md:col-span-1 xl:col-start-2 xl:col-span-2" : 
+              idx === 4 ? "md:col-span-2 xl:col-span-2" : 
+              "md:col-span-1 xl:col-span-2"
+            }`}
+          >
             <div className="mb-8 bg-[var(--color-card-darker)] border border-[var(--color-border-subtle)] w-16 h-16 rounded-2xl flex items-center justify-center transition-colors group-hover:border-[var(--color-border-strong)]">
               {ref.icon}
             </div>

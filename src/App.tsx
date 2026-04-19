@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 
+import { Heart, Leaf } from 'lucide-react'; // Added icons for footer transition
 import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
 import { Introduction } from './components/Introduction';
@@ -71,7 +72,14 @@ export default function App() {
         <ReflectiveActivities />
         <Conclusion />
 
-        <footer className="py-12 border-t border-[var(--color-border-subtle)] bg-[var(--color-card-bg)] flex flex-col md:flex-row items-center justify-between px-6 lg:px-12 w-full mt-24">
+        <div className="w-full relative flex justify-center items-center mt-12 mb-8 px-6 max-w-7xl mx-auto">
+          <div className="w-full h-px bg-[var(--color-border-subtle)]"></div>
+          <div className="absolute flex gap-2 rotate-180 bg-[var(--color-bg-dark)] px-4">
+            <Leaf className="w-6 h-6 text-[var(--color-accent)] opacity-40" />
+          </div>
+        </div>
+
+        <footer className="py-12 bg-[var(--color-card-bg)] flex flex-col md:flex-row items-center justify-between px-6 lg:px-12 w-full border-t border-[var(--color-border-subtle)]">
           <div className="flex flex-col items-center md:items-start gap-1">
             <div className="text-xs uppercase text-[var(--color-text-dim)] tracking-widest font-bold">
               © {new Date().getFullYear()} Maitha Sulaiman.

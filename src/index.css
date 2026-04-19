@@ -7,7 +7,7 @@
   --color-card-bg: #f5eedf;
   --color-card-darker: #eae0cf;
   --color-text-main: #4a3728;
-  --color-text-dim: #7a6350;
+  --color-text-dim: #655140; /* Darkened from #7a6350 for better readability */
   --color-border-subtle: #d2c4aa;
   --color-border-strong: #8b5e3c;
   --color-border-card: #5c4033; /* Dark brown outlines as requested */
@@ -95,9 +95,11 @@ body {
 }
 
 .nav-link.active {
-  color: var(--color-text-main);
-  background: var(--color-card-darker);
-  border: 1px solid var(--color-border-subtle);
+  color: #fff;
+  background: var(--color-border-strong);
+  border: 1px solid var(--color-border-strong);
+  box-shadow: 0 4px 12px rgba(139, 94, 60, 0.4);
+  transform: translateY(-1px);
 }
 
 .section-tag {

@@ -10,7 +10,7 @@ export function Conclusion() {
   };
 
   return (
-    <section id="conclusion" className="py-24 md:py-40 px-6 lg:px-12 max-w-7xl mx-auto border-t border-[var(--color-border-subtle)] relative overflow-hidden">
+    <section id="conclusion" className="pt-24 pb-12 md:pt-40 md:pb-16 px-6 lg:px-12 max-w-7xl mx-auto border-t border-[var(--color-border-subtle)] relative overflow-hidden">
        <div className="absolute top-10 right-10 opacity-30">
         <Leaf className="w-16 h-16 text-[var(--color-accent)]" />
       </div>
@@ -20,8 +20,8 @@ export function Conclusion() {
         <h3 className="font-display text-[40px] md:text-[80px] leading-[1] text-[var(--color-text-main)] mb-16 font-normal tracking-tight">Conclusion</h3>
       </FadeIn>
 
-      <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 relative z-10">
-        <FadeIn delay={0.1}>
+      <div className="grid lg:grid-cols-12 gap-16 lg:gap-20 relative z-10">
+        <FadeIn delay={0.1} className="lg:col-span-7">
           <div className="text-lg text-[var(--color-text-dim)] font-sans leading-[1.8]">
             <p className="text-2xl text-[var(--color-border-strong)] font-display italic font-medium mb-8 leading-relaxed">
               "This semester fundamentally reshaped my definition of health from a singular physical metric into a deeply interconnected web of physical resilience, nutritional awareness, and mental fortification."
@@ -38,7 +38,7 @@ export function Conclusion() {
           </div>
         </FadeIn>
 
-        <FadeIn delay={0.2} className="flex flex-col justify-center">
+        <FadeIn delay={0.2} className="flex flex-col justify-center lg:col-span-5">
           <div className="glass-card p-10 lg:p-12 relative overflow-hidden group bg-[#f0e6d2]">
              <div className="absolute top-0 left-0 w-full h-2 bg-[var(--color-accent)]" />
             <h4 className="text-2xl font-display font-medium tracking-tight text-[var(--color-text-main)] mb-8 border-b border-[var(--color-border-subtle)] pb-4">Highlighted Takeaways</h4>
@@ -75,9 +75,9 @@ export function Conclusion() {
               </li>
             </ul>
 
-            <button onClick={() => scrollTo('home')} className="mt-12 w-full flex items-center justify-between p-4 bg-[var(--color-card-bg)] border border-[var(--color-border-subtle)] hover:bg-[var(--color-card-darker)] transition-all group/btn rounded shadow-sm text-[var(--color-text-main)]">
+            <button onClick={() => scrollTo('home')} className="mt-12 w-full flex items-center justify-between p-4 bg-[var(--color-card-darker)] border-2 border-[var(--color-border-strong)] hover:bg-[var(--color-border-strong)] hover:text-white transition-all duration-300 group/btn rounded shadow-md hover:shadow-lg text-[var(--color-text-main)]">
               <span className="font-sans text-sm tracking-widest uppercase font-bold transition-colors">Return to Top</span>
-              <ArrowRight className="w-5 h-5 transition-transform group-hover/btn:-translate-y-1 transform -rotate-90" />
+              <ArrowRight className="w-5 h-5 transition-transform group-hover/btn:-translate-y-2 transform -rotate-90" />
             </button>
           </div>
         </FadeIn>
